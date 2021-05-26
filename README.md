@@ -1,4 +1,4 @@
-#VAERS Analysis
+# VAERS Analysis
 
 This is a tool for analyzing the VAERS vaccine data. 
 
@@ -9,15 +9,16 @@ Search for all reports with a certain text string (eg "Pfizer" or "covid") and s
 It's an example of how you can use some of the natural language processing features of: 
 https://textblob.readthedocs.io/en/dev/quickstart.html
 
-#Usage
+# Usage
 Download VAERS raw data 2020 and 2021 to the same directory, from https://vaers.hhs.gov/data.html
 
 Run read.py and enter the vaccine to search for. Wait a day or two if you are using the script as is with the TextBlob processing.
 
-#Bugs
+# Bugs
 
 The most-common noun phrases aren't so useful in this case and may not catch all the noun phrases, including some that are not so useful For example searching for Pfizer's COVID-19:
 
+```
 ('covid-19', 25735)
 ('bnt162b2', 18841)
 ('medical history', 17404)
@@ -218,6 +219,7 @@ The most-common noun phrases aren't so useful in this case and may not catch all
 ('unknown results', 275)
 ('vaccination', 272)
 ('temporal relationship', 272)
+```
 
 Once processed now filter the filtered results with for example:
 
